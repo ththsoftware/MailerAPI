@@ -14,3 +14,6 @@ def mail():
     elif request.method == "GET":
         return 'Thank you for your interest in the site! Mailer is online.'
 
+
+if __name__ == '__main__':
+    app.run()
