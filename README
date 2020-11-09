@@ -1,0 +1,26 @@
+MailerAPI is a Python API for integration with the validation.js with the bootstrap template utilized on ththsoftware.com
+
+Here I will add the credits for this bootstrap template and the validation.js
+ For the whole template:
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.4.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  For validation.js
+  /**
+  * PHP Email Form Validation - v2.1
+  * URL: https://bootstrapmade.com/php-email-form/
+  * Author: BootstrapMade.com
+  */
+
+I am not utilizing the php backend that they have prebuilt. However the validation.js file has been included in the free version of this template.
+
+In keeping with the user agreement I am not using the contact.php file with the php library.
+
+I have built this API to operate independantly from the website so changes to validation.js or the creation of a new AJAX sender for greater flexibility.
+
+Flask and smtplib are the packages that need to be installed to utilize these python files.
+
+This is a portfolio item, not a product.
