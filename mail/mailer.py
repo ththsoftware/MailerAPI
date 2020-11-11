@@ -1,4 +1,5 @@
 import smtplib
+import socket
 
 
 class Mailer:
@@ -11,6 +12,7 @@ class Mailer:
     def send(self):
         port = 587
         smtp_server = "smtp.office365.com"
+        smtp_address = socket.gethostbyname(smtp_server)
         login = "tomnt93@outlook.com"
         password = ""
 
@@ -24,7 +26,7 @@ class Mailer:
         {self.message_body}"""
 
         try:
-            with smtplib.SMTP(smtp_server, port) as server:
+            with smtplib.SMTP(smtp_address, port) as server:
                 server.starttls()
                 server.login(login, password)
                 server.sendmail(sender, receiver, message)
