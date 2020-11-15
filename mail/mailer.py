@@ -4,10 +4,10 @@ import socket
 
 class Mailer:
     def __init__(self, message_from_name, message_from_email, message_subject, message_body):
-        self.message_from_name = message_from_name
-        self.message_from_email = message_from_email
-        self.message_subject = message_subject
-        self.message_body = message_body
+        self.message_from_name = message_from_name.get('value')
+        self.message_from_email = message_from_email.get('value')
+        self.message_subject = message_subject.get('value')
+        self.message_body = message_body.get('value')
 
     def send(self):
         port = 587
@@ -18,10 +18,10 @@ class Mailer:
 
         sender = "tomnt93@outlook.com"
         receiver = "thomas@ththsofware.com"
-        message = f"""\
+        message = f"""Subject: New message sent from ththsoftware.com\n\n
+        Name: {self.message_from_name}
         Email: {self.message_from_email}
         Subject: {self.message_subject}
-        From: {self.message_from_name}
 
         {self.message_body}"""
 

@@ -9,7 +9,7 @@ def mail():
     if request.method == "POST":
         if request.is_json():
             data = request.get_json()
-            mailer = Mailer(data['name'], data['email'], data['subject'], data['message'])
+            mailer = Mailer(data[0], data[1], data[2], data[3])
             response = mailer.send()
             return make_response(jsonify(response))
         else:
